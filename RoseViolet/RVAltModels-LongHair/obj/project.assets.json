@@ -82,6 +82,16 @@
         "runtime": {
           "bin/placeholder/CriFs.V2.Hook.Interfaces.dll": {}
         }
+      },
+      "SPD.File.Emulator.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/SPD.File.Emulator.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SPD.File.Emulator.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -167,6 +177,11 @@
       "type": "project",
       "path": "../../Interfaces/CriFs.V2.Hook.ReloadedII/Interfaces/CriFs.V2.Hook.Interfaces/CriFs.V2.Hook.Interfaces.csproj",
       "msbuildProject": "../../Interfaces/CriFs.V2.Hook.ReloadedII/Interfaces/CriFs.V2.Hook.Interfaces/CriFs.V2.Hook.Interfaces.csproj"
+    },
+    "SPD.File.Emulator.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../../Interfaces/FileEmulationFramework/Emulator/Interfaces/SPD.File.Emulator.Interfaces/SPD.File.Emulator.Interfaces.csproj",
+      "msbuildProject": "../../Interfaces/FileEmulationFramework/Emulator/Interfaces/SPD.File.Emulator.Interfaces/SPD.File.Emulator.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -174,23 +189,24 @@
       "CriFs.V2.Hook.Interfaces >= 1.0.0",
       "P5R.CostumeFramework.Interfaces >= 1.0.0",
       "Reloaded.Mod.Interfaces >= 2.4.0",
-      "Reloaded.SharedLib.Hooks >= 1.9.0"
+      "Reloaded.SharedLib.Hooks >= 1.9.0",
+      "SPD.File.Emulator.Interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alex7\\.nuget\\packages\\": {}
+    "C:\\Users\\Zylvos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels-LongHair\\RVAltModelsLongHair.csproj",
+      "projectUniqueName": "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\RoseViolet\\RVAltModels-LongHair\\RVAltModelsLongHair.csproj",
       "projectName": "RVAltModelsLongHair",
-      "projectPath": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels-LongHair\\RVAltModelsLongHair.csproj",
-      "packagesPath": "C:\\Users\\alex7\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels-LongHair\\obj\\",
+      "projectPath": "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\RoseViolet\\RVAltModels-LongHair\\RVAltModelsLongHair.csproj",
+      "packagesPath": "C:\\Users\\Zylvos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\RoseViolet\\RVAltModels-LongHair\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alex7\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Zylvos\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0-windows"
@@ -202,8 +218,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\Interfaces\\CriFs.V2.Hook.ReloadedII\\Interfaces\\CriFs.V2.Hook.Interfaces\\CriFs.V2.Hook.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\Interfaces\\CriFs.V2.Hook.ReloadedII\\Interfaces\\CriFs.V2.Hook.Interfaces\\CriFs.V2.Hook.Interfaces.csproj"
+            "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\Interfaces\\CriFs.V2.Hook.ReloadedII\\Interfaces\\CriFs.V2.Hook.Interfaces\\CriFs.V2.Hook.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\Interfaces\\CriFs.V2.Hook.ReloadedII\\Interfaces\\CriFs.V2.Hook.Interfaces\\CriFs.V2.Hook.Interfaces.csproj"
+            },
+            "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\Interfaces\\FileEmulationFramework\\Emulator\\Interfaces\\SPD.File.Emulator.Interfaces\\SPD.File.Emulator.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\Interfaces\\FileEmulationFramework\\Emulator\\Interfaces\\SPD.File.Emulator.Interfaces\\SPD.File.Emulator.Interfaces.csproj"
             }
           }
         }
@@ -249,26 +268,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.20, 7.0.20]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.20, 7.0.20]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.20, 7.0.20]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

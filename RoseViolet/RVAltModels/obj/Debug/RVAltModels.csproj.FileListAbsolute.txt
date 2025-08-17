@@ -28,3 +28,14 @@ C:\Users\Zylvos\Desktop\Reloaded-II\Mods\p5rpc.kasumi.altmodels\RVAltModels.dll
 C:\Users\Zylvos\Desktop\Reloaded-II\Mods\p5rpc.kasumi.altmodels\RVAltModels.pdb
 C:\Users\Zylvos\Desktop\P5RMods\Repo\protagsumiaddonconfig\RoseViolet\RVAltModels\obj\Debug\RVAltMod.C3C2565F.Up2Date
 C:\Users\Zylvos\Desktop\P5RMods\Repo\protagsumiaddonconfig\RoseViolet\RVAltModels\obj\Debug\ref\RVAltModels.dll
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.csproj.AssemblyReference.cache
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.AssemblyInfoInputs.cache
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.AssemblyInfo.cs
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.csproj.CoreCompileInputs.cache
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.sourcelink.json
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltMod.C3C2565F.Up2Date
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.dll
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\refint\RVAltModels.dll
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\RVAltModels.pdb
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVAltModels\obj\Debug\ref\RVAltModels.dll

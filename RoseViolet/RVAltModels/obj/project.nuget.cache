@@ -1,17 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "OpeuS/WBNWA=",
+  "dgSpecHash": "8IdOuGKxu5c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Zylvos\\Desktop\\P5RMods\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels\\RVAltModels.csproj",
+  "projectFilePath": "C:\\Users\\Zylvos\\Desktop\\RoseAndViolet\\RoseAndViolet\\RoseViolet\\RVAltModels\\RVAltModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zylvos\\.nuget\\packages\\crifsv2lib.definitions\\1.1.0\\crifsv2lib.definitions.1.1.0.nupkg.sha512",
     "C:\\Users\\Zylvos\\.nuget\\packages\\p5r.costumeframework.interfaces\\1.0.0\\p5r.costumeframework.interfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\Zylvos\\.nuget\\packages\\reloaded.hooks.definitions\\1.11.0\\reloaded.hooks.definitions.1.11.0.nupkg.sha512",
     "C:\\Users\\Zylvos\\.nuget\\packages\\reloaded.mod.interfaces\\2.4.0\\reloaded.mod.interfaces.2.4.0.nupkg.sha512",
-    "C:\\Users\\Zylvos\\.nuget\\packages\\reloaded.sharedlib.hooks\\1.9.0\\reloaded.sharedlib.hooks.1.9.0.nupkg.sha512",
-    "C:\\Users\\Zylvos\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\Zylvos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\Zylvos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+    "C:\\Users\\Zylvos\\.nuget\\packages\\reloaded.sharedlib.hooks\\1.9.0\\reloaded.sharedlib.hooks.1.9.0.nupkg.sha512"
   ],
   "logs": []
 }

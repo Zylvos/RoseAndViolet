@@ -53,33 +53,39 @@ namespace RVAltModelsLongHair.Configuration
             NoAOASmug,
         }
 
+        [Category("Bustup")]
+        [DisplayName("Epic Partypanel In Color")]
+        [Description("Colorful bustup in battle. By Zrego and Wisteria.")]
+        [DefaultValue(false)]
+        [Display(Order = 1)]
+        public bool ColorPartyPanelRV { get; set; } = false;
 
         [Category("Model")]
         [DisplayName("Black Leotard Overhaul")]
         [Description("Replaces the Black Leotard phantom suit with a recoloured Leotard.")]
         [DefaultValue(PhantomSuit.Default)]
-        [Display(Order = 1)]
+        [Display(Order = 2)]
         public PhantomSuit PhantomSuitValue { get; set; }
 
         [Category("Model")]
         [DisplayName("No All-Out-Attack Portrait")]
         [Description("Removes the All-Out-Attack finisher art. By lyncpk.")]
         [DefaultValue(NoAOAportrait.Default)]
-        [Display(Order = 2)]
+        [Display(Order = 3)]
         public NoAOAportrait AOAValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Golden Rapiers")]
         [Description("For usage with the Phantom Suit Overhaul, disable if you want regular Rapiers or other weapon model mods to work.")]
         [DefaultValue(false)]
-        [Display(Order = 3)]
+        [Display(Order = 4)]
         public bool GoldRapiers { get; set; } = false;
 
         [Category("Model")]
         [DisplayName("Blue Dress over Winter Casual (R&V)")]
         [Description("Replaces the player's winter casual outfit with the blue dress from Sumire's SL.")]
         [DefaultValue(false)]
-        [Display(Order = 4)]
+        [Display(Order = 5)]
         public bool BlueDressRV { get; set; } = false;
     }
 

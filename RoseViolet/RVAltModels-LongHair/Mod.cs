@@ -3,6 +3,7 @@ using RVAltModelsLongHair.Template;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using CriFs.V2.Hook.Interfaces;
+using SPD.File.Emulator.Interfaces;
 using P5R.CostumeFramework.Interfaces;
 using CriExtensions;
 
@@ -32,9 +33,11 @@ namespace RVAltModelsLongHair
             // Initialize file emulator controllers
             var criFsCtl = _modLoader.GetController<ICriFsRedirectorApi>();
             var costumeCtl = _modLoader.GetController<ICostumeApi>();
+            var spdEmuCtl = _modLoader.GetController<ISpdEmulator>();
 
             if (criFsCtl == null || !criFsCtl.TryGetTarget(out var criFsApi)) { _logger.WriteLine("CRI FS missing → cpk and binds broken.", System.Drawing.Color.Red); return; }
             if (costumeCtl == null || !costumeCtl.TryGetTarget(out var costumeApi)) { _logger.WriteLine("Costume API missing → Costumes broken.", System.Drawing.Color.Red); return; }
+            if (spdEmuCtl == null || !spdEmuCtl.TryGetTarget(out var spdEmu)) { _logger.WriteLine("SPD Emu missing → SPD merges broken.", System.Drawing.Color.Red); return; }
 
             // Leotard Overhaul (Pure White or Red and Gold)
             if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite || _configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
@@ -51,6 +54,10 @@ namespace RVAltModelsLongHair
             // Blue Dress
             if (_configuration.BlueDressRV)
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "BlueDress"), modDir, criFsApi, modId);
+
+            // EPIC colorful party panel
+            if (_configuration.ColorPartyPanelRV)
+                spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", "SPD"));
 
             // No AOA portrait
             if (_configuration.AOAValue == Config.NoAOAportrait.NoAOA || _configuration.AOAValue == Config.NoAOAportrait.NoAOASmug)
