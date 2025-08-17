@@ -1,0 +1,275 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0-windows7.0": {
+      "CriFsV2Lib.Definitions/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/CriFsV2Lib.Definitions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/CriFsV2Lib.Definitions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "P5R.CostumeFramework.Interfaces/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/P5R.CostumeFramework.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/P5R.CostumeFramework.Interfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Reloaded.Hooks.Definitions/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Reloaded.Hooks.Definitions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Reloaded.Hooks.Definitions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Reloaded.Mod.Interfaces/2.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Reloaded.Mod.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Reloaded.SharedLib.Hooks/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Reloaded.Hooks.Definitions": "1.11.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CriFs.V2.Hook.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CriFsV2Lib.Definitions": "1.1.0"
+        },
+        "compile": {
+          "bin/placeholder/CriFs.V2.Hook.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CriFs.V2.Hook.Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CriFsV2Lib.Definitions/1.1.0": {
+      "sha512": "hPvJ4DR16lVSYHSddUsMTUQLajCALhNA+GDfAY0VMa4xSvBOEbZeCuj2tYO8GqeQMyiosL0/aRaFZ2OgFefRKA==",
+      "type": "package",
+      "path": "crifsv2lib.definitions/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "crifsv2lib.definitions.1.1.0.nupkg.sha512",
+        "crifsv2lib.definitions.nuspec",
+        "lib/net7.0/CriFsV2Lib.Definitions.dll",
+        "lib/net7.0/CriFsV2Lib.Definitions.xml"
+      ]
+    },
+    "P5R.CostumeFramework.Interfaces/1.0.0": {
+      "sha512": "nRPSvo+iqBnZTmDlwFtlfxFqUt3p2mNX2tTx5BcR6UXYGRwqrwbcbwKjRwfAoD62OaOgV4jf6WNxGkxzIkhrQA==",
+      "type": "package",
+      "path": "p5r.costumeframework.interfaces/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net7.0/P5R.CostumeFramework.Interfaces.dll",
+        "lib/net7.0/P5R.CostumeFramework.Interfaces.xml",
+        "lib/net8.0/P5R.CostumeFramework.Interfaces.dll",
+        "lib/net8.0/P5R.CostumeFramework.Interfaces.xml",
+        "p5r.costumeframework.interfaces.1.0.0.nupkg.sha512",
+        "p5r.costumeframework.interfaces.nuspec"
+      ]
+    },
+    "Reloaded.Hooks.Definitions/1.11.0": {
+      "sha512": "/z0AwcCvVTQHlQ9SMMMBqKEIrm5t/yBFPylySW2Rnr7uRGV9jGfoACFe79KZKF976dhtkyy2xl0HIXz5hRUkng==",
+      "type": "package",
+      "path": "reloaded.hooks.definitions/1.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net5.0/Reloaded.Hooks.Definitions.dll",
+        "lib/net5.0/Reloaded.Hooks.Definitions.xml",
+        "lib/net6.0/Reloaded.Hooks.Definitions.dll",
+        "lib/net6.0/Reloaded.Hooks.Definitions.xml",
+        "lib/netcoreapp3.0/Reloaded.Hooks.Definitions.dll",
+        "lib/netcoreapp3.0/Reloaded.Hooks.Definitions.xml",
+        "lib/netstandard2.0/Reloaded.Hooks.Definitions.dll",
+        "lib/netstandard2.0/Reloaded.Hooks.Definitions.xml",
+        "reloaded.hooks.definitions.1.11.0.nupkg.sha512",
+        "reloaded.hooks.definitions.nuspec"
+      ]
+    },
+    "Reloaded.Mod.Interfaces/2.4.0": {
+      "sha512": "HKQu7M0MyToKU4NK5Ula29MXSNeHz01ZzMK9BWD+xqJCITemAPdMW+w60Swln3ceGCU/ZooFSKtn4I8rcSA9AQ==",
+      "type": "package",
+      "path": "reloaded.mod.interfaces/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "NuGet-Icon.png",
+        "lib/netcoreapp3.1/Reloaded.Mod.Interfaces.dll",
+        "lib/netcoreapp3.1/Reloaded.Mod.Interfaces.xml",
+        "reloaded.mod.interfaces.2.4.0.nupkg.sha512",
+        "reloaded.mod.interfaces.nuspec"
+      ]
+    },
+    "Reloaded.SharedLib.Hooks/1.9.0": {
+      "sha512": "AEDTDhCnYxJGuLrdZCZPoiqrdl/lW4XwA6bb5dntOvkyw4RBBm/gqoNlHS7RJS7k+kt36ES+UFZAtBeyusYtgw==",
+      "type": "package",
+      "path": "reloaded.sharedlib.hooks/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.dll",
+        "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.xml",
+        "reloaded.sharedlib.hooks.1.9.0.nupkg.sha512",
+        "reloaded.sharedlib.hooks.nuspec"
+      ]
+    },
+    "CriFs.V2.Hook.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../../Interfaces/CriFs.V2.Hook.ReloadedII/Interfaces/CriFs.V2.Hook.Interfaces/CriFs.V2.Hook.Interfaces.csproj",
+      "msbuildProject": "../../Interfaces/CriFs.V2.Hook.ReloadedII/Interfaces/CriFs.V2.Hook.Interfaces/CriFs.V2.Hook.Interfaces.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0-windows7.0": [
+      "CriFs.V2.Hook.Interfaces >= 1.0.0",
+      "P5R.CostumeFramework.Interfaces >= 1.0.0",
+      "Reloaded.Mod.Interfaces >= 2.4.0",
+      "Reloaded.SharedLib.Hooks >= 1.9.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alex7\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels-LongHair\\RVAltModelsLongHair.csproj",
+      "projectName": "RVAltModelsLongHair",
+      "projectPath": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels-LongHair\\RVAltModelsLongHair.csproj",
+      "packagesPath": "C:\\Users\\alex7\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\RoseViolet\\RVAltModels-LongHair\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\alex7\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0-windows"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "projectReferences": {
+            "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\Interfaces\\CriFs.V2.Hook.ReloadedII\\Interfaces\\CriFs.V2.Hook.Interfaces\\CriFs.V2.Hook.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\alex7\\Desktop\\Repo\\protagsumiaddonconfig\\Interfaces\\CriFs.V2.Hook.ReloadedII\\Interfaces\\CriFs.V2.Hook.Interfaces\\CriFs.V2.Hook.Interfaces.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net7.0-windows7.0": {
+        "targetAlias": "net7.0-windows",
+        "dependencies": {
+          "P5R.CostumeFramework.Interfaces": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "Reloaded.Mod.Interfaces": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "target": "Package",
+            "version": "[2.4.0, )"
+          },
+          "Reloaded.SharedLib.Hooks": {
+            "target": "Package",
+            "version": "[1.9.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
