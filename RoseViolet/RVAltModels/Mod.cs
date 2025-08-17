@@ -61,7 +61,7 @@ namespace RVAltModels
 
             // EPIC colorful party panel
             if (_configuration.ColorPartyPanelRV)
-                spdEmu.AddDirectory(Path.Combine("OptionalModFiles", "EPICPartyPanel"), modDir, criFsApi, modId);
+                spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", "SPD"));
 
             // Menu artworks
             if (_configuration.HeroTexValue == Config.HeroTexRV.NeptuneRV)
