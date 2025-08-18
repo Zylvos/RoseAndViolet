@@ -50,6 +50,14 @@ namespace RVMainMod.Configuration
         [DefaultValue(false)]
         [Display(Order = 3)]
         public bool WeaponsPatch { get; set; } = false;
+
+        [Category("Optional")]
+        [DisplayName("Ryuji Palace Scene (Rose is angry)")]
+        [Description("Modified Ryuji Palace Scene. Disable it if you use the CBT option.")]
+        [DefaultValue(false)]
+        [Display(Order = 4)]
+        public bool RyujiOuch { get; set; } = false;
+
     }
 
     /// <summary>

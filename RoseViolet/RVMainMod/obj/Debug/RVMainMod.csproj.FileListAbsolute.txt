@@ -1,0 +1,15 @@
+C:\Users\Zylvos\Desktop\Reloaded-II\Mods\p5rpc.kasumi.roseandviolet\ModConfig.json
+C:\Users\Zylvos\Desktop\Reloaded-II\Mods\p5rpc.kasumi.roseandviolet\RVMainMod.deps.json
+C:\Users\Zylvos\Desktop\Reloaded-II\Mods\p5rpc.kasumi.roseandviolet\RVMainMod.dll
+C:\Users\Zylvos\Desktop\Reloaded-II\Mods\p5rpc.kasumi.roseandviolet\RVMainMod.pdb
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.csproj.AssemblyReference.cache
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.AssemblyInfoInputs.cache
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.AssemblyInfo.cs
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.csproj.CoreCompileInputs.cache
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.sourcelink.json
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.csproj.Up2Date
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.dll
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\refint\RVMainMod.dll
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\RVMainMod.pdb
+C:\Users\Zylvos\Desktop\RoseAndViolet\RoseAndViolet\RoseViolet\RVMainMod\obj\Debug\ref\RVMainMod.dll

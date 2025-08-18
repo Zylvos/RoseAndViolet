@@ -48,6 +48,11 @@ namespace RVMainMod
             if (_configuration.WeaponsPatch)
                 criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "WeaponsAndEquipment"));
                 pakEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "WeaponsAndEquipment", "PAK"));
+
+            // Ryuji Palace scene
+            if (_configuration.RyujiOuch)
+                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "RyujiPalaceScene"));
+
         }
 
         private static void BindAllFilesIn(string subPathRelativeToModDir, string modDir, ICriFsRedirectorApi criFsApi, string modId)
