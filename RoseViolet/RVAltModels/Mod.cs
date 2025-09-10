@@ -73,6 +73,15 @@ namespace RVAltModels
                 string AOAFolder = _configuration.AOAValue == Config.NoAOAportrait.NoAOA ? "NoAoAPortrait" : "SmugAoA";
                 BindAllFilesIn(Path.Combine("OptionalModFiles", AOAFolder), modDir, criFsApi, modId);
             }
+            
+            // Lawson Outfit
+            if (_configuration.LawsonRV)
+                BindAllFilesIn(Path.Combine("OptionalModFiles", "Lawson"), modDir, criFsApi, modId);
+
+            // Workout outfit
+            if (_configuration.WorkoutRV)
+                BindAllFilesIn(Path.Combine("OptionalModFiles", "TracksuitConceptArt"), modDir, criFsApi, modId);
+
         }
 
         private static void BindAllFilesIn(string subPathRelativeToModDir, string modDir, ICriFsRedirectorApi criFsApi, string modId)

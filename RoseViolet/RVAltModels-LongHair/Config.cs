@@ -87,6 +87,21 @@ namespace RVAltModelsLongHair.Configuration
         [DefaultValue(false)]
         [Display(Order = 5)]
         public bool BlueDressRV { get; set; } = false;
+
+        [Category("Model")]
+        [DisplayName("Lawson Outfit over 777 Outfit")]
+        [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
+        [DefaultValue(false)]
+        [Display(Order = 6)]
+        public bool LawsonRV { get; set; } = false;
+
+        [Category("Model")]
+        [DisplayName("Concept art tracksuit for workout")]
+        [Description("Replaces the workout outfit (red tank top) with the recolored tracksuit by MyTamagos based on concept art.")]
+        [DefaultValue(false)]
+        [Display(Order = 7)]
+        public bool WorkoutRV { get; set; } = false;
+
     }
 
     /// <summary>
