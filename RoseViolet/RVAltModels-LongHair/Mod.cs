@@ -55,6 +55,15 @@ namespace RVAltModelsLongHair
             if (_configuration.BlueDressRV)
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "BlueDress"), modDir, criFsApi, modId);
 
+            // Fuuka Dress
+            if (_configuration.FuukaDressRV)
+                BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerDress"), modDir, criFsApi, modId);
+
+            // Bustup
+            if (_configuration.BustupValue == Config.BustupRV.LegacyV1 || _configuration.BustupValue == Config.BustupRV.LegacyV2);
+                string BustupFolder = _configuration.BustupValue == Config.BustupRV.LegacyV1 ? "LegacyV1" : "LegacyV2";
+                BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder), modDir, criFsApi, modId);
+
             // EPIC colorful party panel
             if (_configuration.ColorPartyPanelRV)
                 spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", "SPD"));

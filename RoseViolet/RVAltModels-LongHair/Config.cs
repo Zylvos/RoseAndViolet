@@ -41,6 +41,18 @@ namespace RVAltModelsLongHair.Configuration
             RedGold,
         }
 
+        public enum BustupRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Legacy (neutral)")]
+            LegacyV1,
+
+            [Display(Name = "Legacy (smiling)")]
+            LegacyV2,
+        }
+
         public enum NoAOAportrait
         {
             [Display(Name = "Disabled")]
@@ -52,6 +64,13 @@ namespace RVAltModelsLongHair.Configuration
             [Display(Name = "Enabled + Smug")]
             NoAOASmug,
         }
+
+        [Category("Bustup")]
+        [DisplayName("Dialogue Portrait")]
+        [Description("Select your preferred dialogue bustups.")]
+        [DefaultValue(BustupRV.Default)]
+        [Display(Order = 0)]
+        public BustupRV BustupValue { get; set; }
 
         [Category("Bustup")]
         [DisplayName("Epic Partypanel In Color")]
@@ -89,17 +108,24 @@ namespace RVAltModelsLongHair.Configuration
         public bool BlueDressRV { get; set; } = false;
 
         [Category("Model")]
+        [DisplayName("Fuuka's Dress over Summer Casual (R&V)")]
+        [Description("Replaces the player's summer casual outfit with Fuuka's blue dress from P3.")]
+        [DefaultValue(false)]
+        [Display(Order = 6)]
+        public bool FuukaDressRV { get; set; } = false;
+
+        [Category("Model")]
         [DisplayName("Lawson Outfit over 777 Outfit")]
         [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
         [DefaultValue(false)]
-        [Display(Order = 6)]
+        [Display(Order = 7)]
         public bool LawsonRV { get; set; } = false;
 
         [Category("Model")]
         [DisplayName("Concept art tracksuit for workout")]
         [Description("Replaces the workout outfit (red tank top) with the recolored tracksuit by MyTamagos based on concept art.")]
         [DefaultValue(false)]
-        [Display(Order = 7)]
+        [Display(Order = 8)]
         public bool WorkoutRV { get; set; } = false;
 
     }
