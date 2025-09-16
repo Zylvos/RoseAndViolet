@@ -41,6 +41,18 @@ namespace RVAltModels.Configuration
             RedGold,
         }
 
+        public enum SummerDressRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Fuuka's dress (Blue Ribbon)")]
+            FuukaBlue,
+
+            [Display(Name = "Fuuka's dress (White Ribbon)")]
+            FuukaWhite,
+        }
+
         public enum BustupRV
         {
             [Display(Name = "Default")]
@@ -129,11 +141,11 @@ namespace RVAltModels.Configuration
         public bool BlueDressRV { get; set; } = false;
 
         [Category("Model")]
-        [DisplayName("Fuuka's Dress over Summer Casual (R&V)")]
-        [Description("Replaces the player's summer casual outfit with Fuuka's blue dress from P3.")]
-        [DefaultValue(false)]
+        [DisplayName("Summer Casual outfit")]
+        [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress by MyTamagos.")]
+        [DefaultValue(SummerDressRV.Default)]
         [Display(Order = 7)]
-        public bool FuukaDressRV { get; set; } = false;
+        public SummerDressRV SummerDressValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Lawson Outfit over 777 Outfit")]

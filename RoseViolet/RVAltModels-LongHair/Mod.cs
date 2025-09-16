@@ -56,8 +56,11 @@ namespace RVAltModelsLongHair
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "BlueDress"), modDir, criFsApi, modId);
 
             // Fuuka Dress
-            if (_configuration.FuukaDressRV)
-                BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerDress"), modDir, criFsApi, modId);
+            if (_configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue || _configuration.SummerDressValue == Config.SummerDressRV.FuukaWhite)
+            {
+                string summersuitFolder = _configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue ? "SummerDressBlue" : "SummerDressWhite";
+                BindAllFilesIn(Path.Combine("OptionalModFiles", summersuitFolder), modDir, criFsApi, modId);
+            }
 
             // Bustup
             if (_configuration.BustupValue == Config.BustupRV.LegacyV1 || _configuration.BustupValue == Config.BustupRV.LegacyV2);
