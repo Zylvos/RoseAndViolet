@@ -63,9 +63,19 @@ namespace RVAltModelsLongHair
             }
 
             // Bustup
-            if (_configuration.BustupValue == Config.BustupRV.LegacyV1 || _configuration.BustupValue == Config.BustupRV.LegacyV2);
-                string BustupFolder = _configuration.BustupValue == Config.BustupRV.LegacyV1 ? "LegacyV1" : "LegacyV2";
+            if (_configuration.BustupValue != Config.BustupRV.Default)
+            {
+                string BustupFolder = "";
+                if (_configuration.BustupValue == Config.BustupRV.LegacyV1)
+                    {
+                    BustupFolder = "LegacyV1";    
+                    }
+                else if (_configuration.BustupValue == Config.BustupRV.LegacyV2)
+                    {
+                    BustupFolder = "LegacyV2";    
+                    }
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder), modDir, criFsApi, modId);
+            }
 
             // EPIC colorful party panel
             if (_configuration.ColorPartyPanelRV)

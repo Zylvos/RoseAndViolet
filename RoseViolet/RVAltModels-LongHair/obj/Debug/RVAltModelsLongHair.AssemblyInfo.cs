@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RVAltModelsLongHair")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56a62aea81852d56ec00a8cd5de13b9f2c22d1c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0cfb64b2d827e7baf521675ba3968f1323bad25")]
 [assembly: System.Reflection.AssemblyProductAttribute("RVAltModelsLongHair")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RVAltModelsLongHair")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
