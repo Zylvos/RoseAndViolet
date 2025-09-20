@@ -64,17 +64,37 @@ namespace RVAltModelsLongHair
 
             // Bustup
             if (_configuration.BustupValue != Config.BustupRV.Default)
+                {
+                    string BustupFolder = "";
+                    string BustupSubFolder = "";
+                    if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
+                        {
+                            BustupSubFolder = "PureWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
+                        {
+                             BustupSubFolder = "RedWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
+                        {
+                                BustupSubFolder = "BlackLeotard";
+                        }
+                    if (_configuration.BustupValue == Config.BustupRV.LegacyV1)
+                        {
+                        BustupFolder = "LegacyV1";    
+                        }
+                    else if (_configuration.BustupValue == Config.BustupRV.LegacyV2)
+                        {
+                        BustupFolder = "LegacyV2";    
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder, BustupSubFolder), modDir, criFsApi, modId);
+                }
+
+            // AOA Cutin (temporary, copy bustup if colors are added)
+            if (_configuration.AOACutinValue != Config.AOACutinRV.Default)
             {
-                string BustupFolder = "";
-                if (_configuration.BustupValue == Config.BustupRV.LegacyV1)
-                    {
-                    BustupFolder = "LegacyV1";    
-                    }
-                else if (_configuration.BustupValue == Config.BustupRV.LegacyV2)
-                    {
-                    BustupFolder = "LegacyV2";    
-                    }
-                BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder), modDir, criFsApi, modId);
+            string AOACutinFolder = "Johesy";
+            BindAllFilesIn(Path.Combine("OptionalModFiles", "AOACutin", AOACutinFolder), modDir, criFsApi, modId);
             }
 
             // EPIC colorful party panel
@@ -93,8 +113,11 @@ namespace RVAltModelsLongHair
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "Lawson"), modDir, criFsApi, modId);
 
             // Workout outfit
-            if (_configuration.WorkoutRV)
-                BindAllFilesIn(Path.Combine("OptionalModFiles", "TracksuitConceptArt"), modDir, criFsApi, modId);
+            if (_configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit || _configuration.TracksuitValue == Config.TracksuitRV.ConceptArtTracksuit)
+            {
+                string TracksuitFolder = _configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit ? "BlackTracksuit" : "TracksuitConceptArt";
+                BindAllFilesIn(Path.Combine("OptionalModFiles", "WorkoutOutfit", TracksuitFolder), modDir, criFsApi, modId);
+            }
 
         }
 

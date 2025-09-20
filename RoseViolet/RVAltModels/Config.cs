@@ -90,6 +90,17 @@ namespace RVAltModels.Configuration
             NoAOASmug,
         }
 
+        public enum TracksuitRV
+        {
+            [Display(Name = "Red tank top (Default)")]
+            Default,
+
+            [Display(Name = "Black Tracksuit")]
+            BlackTracksuit,
+
+            [Display(Name = "Concept Art Tracksuit")]
+            ConceptArtTracksuit,
+        }
 
         [Category("Bustup")]
         [DisplayName("Dialogue Portrait")]
@@ -155,11 +166,11 @@ namespace RVAltModels.Configuration
         public bool LawsonRV { get; set; } = false;
 
         [Category("Model")]
-        [DisplayName("Concept art tracksuit for workout")]
-        [Description("Replaces the workout outfit (red tank top) with the recolored tracksuit by MyTamagos based on concept art.")]
-        [DefaultValue(false)]
+        [DisplayName("Workout outfit")]
+        [Description("Choose your prefered workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
+        [DefaultValue(TracksuitRV.Default)]
         [Display(Order = 9)]
-        public bool WorkoutRV { get; set; } = false;
+        public TracksuitRV TracksuitValue { get; set; }
 
     }
 

@@ -63,12 +63,25 @@ namespace RVAltModels
             }
 
             // Bustup
-            if (_configuration.BustupValue != Config.BustupRV.Default || _configuration.BustupValue == Config.BustupRV.LegacyV1 || _configuration.BustupValue == Config.BustupRV.LegacyV2)
+            if (_configuration.BustupValue != Config.BustupRV.Default)
                 {
                     string BustupFolder = "";
+                    string BustupSubFolder = "";
+                    if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
+                        {
+                            BustupSubFolder = "PureWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
+                        {
+                            BustupSubFolder = "RedWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
+                        {
+                            BustupSubFolder = "BlackLeotard";
+                        }
                     if (_configuration.BustupValue == Config.BustupRV.L7M3RV)
                         {
-                        BustupFolder = "L7M3";    
+                        BustupFolder = "L7M3";
                         }
                     else if (_configuration.BustupValue == Config.BustupRV.LegacyV1)
                         {
@@ -78,7 +91,7 @@ namespace RVAltModels
                         {
                         BustupFolder = "LegacyV2";    
                         }
-                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder), modDir, criFsApi, modId);
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder, BustupSubFolder), modDir, criFsApi, modId);
                 }
 
             // EPIC colorful party panel
@@ -101,8 +114,11 @@ namespace RVAltModels
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "Lawson"), modDir, criFsApi, modId);
 
             // Workout outfit
-            if (_configuration.WorkoutRV)
-                BindAllFilesIn(Path.Combine("OptionalModFiles", "TracksuitConceptArt"), modDir, criFsApi, modId);
+            if (_configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit || _configuration.TracksuitValue == Config.TracksuitRV.ConceptArtTracksuit)
+            {
+                string TracksuitFolder = _configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit ? "BlackTracksuit" : "TracksuitConceptArt";
+                BindAllFilesIn(Path.Combine("OptionalModFiles", "WorkoutOutfit", TracksuitFolder), modDir, criFsApi, modId);
+            }
 
         }
 

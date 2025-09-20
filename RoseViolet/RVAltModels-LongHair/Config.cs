@@ -77,6 +77,27 @@ namespace RVAltModelsLongHair.Configuration
             NoAOASmug,
         }
 
+        public enum TracksuitRV
+        {
+            [Display(Name = "Red tank top (Default)")]
+            Default,
+
+            [Display(Name = "Black Tracksuit")]
+            BlackTracksuit,
+
+            [Display(Name = "Concept Art Tracksuit")]
+            ConceptArtTracksuit,
+        }
+
+        public enum AOACutinRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Johesy")]
+            Johesy,
+        }        
+
         [Category("Bustup")]
         [DisplayName("Dialogue Portrait")]
         [Description("Select your preferred dialogue bustups.")]
@@ -91,54 +112,61 @@ namespace RVAltModelsLongHair.Configuration
         [Display(Order = 1)]
         public bool ColorPartyPanelRV { get; set; } = false;
 
+        [Category("Bustup")]
+        [DisplayName("AOA Cutin")]
+        [Description("Choose your prefered AOA. Default by MyTamagos.")]
+        [DefaultValue(AOACutinRV.Default)]
+        [Display(Order = 2)]
+        public AOACutinRV AOACutinValue { get; set; }
+
         [Category("Model")]
         [DisplayName("Black Leotard Overhaul")]
         [Description("Replaces the Black Leotard phantom suit with a recoloured Leotard.")]
         [DefaultValue(PhantomSuit.Default)]
-        [Display(Order = 2)]
+        [Display(Order = 3)]
         public PhantomSuit PhantomSuitValue { get; set; }
 
         [Category("Model")]
         [DisplayName("No All-Out-Attack Portrait")]
         [Description("Removes the All-Out-Attack finisher art. By lyncpk.")]
         [DefaultValue(NoAOAportrait.Default)]
-        [Display(Order = 3)]
+        [Display(Order = 4)]
         public NoAOAportrait AOAValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Golden Rapiers")]
         [Description("For usage with the Phantom Suit Overhaul, disable if you want regular Rapiers or other weapon model mods to work.")]
         [DefaultValue(false)]
-        [Display(Order = 4)]
+        [Display(Order = 5)]
         public bool GoldRapiers { get; set; } = false;
 
         [Category("Model")]
         [DisplayName("Blue Dress over Winter Casual (R&V)")]
         [Description("Replaces the player's winter casual outfit with the blue dress from Sumire's SL.")]
         [DefaultValue(false)]
-        [Display(Order = 5)]
+        [Display(Order = 6)]
         public bool BlueDressRV { get; set; } = false;
 
         [Category("Model")]
         [DisplayName("Summer Casual outfit")]
         [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress by MyTamagos.")]
         [DefaultValue(SummerDressRV.Default)]
-        [Display(Order = 6)]
+        [Display(Order = 7)]
         public SummerDressRV SummerDressValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Lawson Outfit over 777 Outfit")]
         [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
         [DefaultValue(false)]
-        [Display(Order = 7)]
+        [Display(Order = 8)]
         public bool LawsonRV { get; set; } = false;
 
         [Category("Model")]
-        [DisplayName("Concept art tracksuit for workout")]
-        [Description("Replaces the workout outfit (red tank top) with the recolored tracksuit by MyTamagos based on concept art.")]
-        [DefaultValue(false)]
-        [Display(Order = 8)]
-        public bool WorkoutRV { get; set; } = false;
+        [DisplayName("Workout outfit")]
+        [Description("Choose your prefered workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
+        [DefaultValue(TracksuitRV.Default)]
+        [Display(Order = 9)]
+        public TracksuitRV TracksuitValue { get; set; }
 
     }
 
