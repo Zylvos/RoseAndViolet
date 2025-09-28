@@ -44,18 +44,39 @@ namespace RVMainMod.Configuration
         [Display(Order = 2)]
         public bool ConfidantCheat { get; set; } = false;
 
+        [Category("Cheat Sheets")]
+        [DisplayName("Crosswords Cheat Sheet")]
+        [Description("Shows the answer in the crosswords questions. Disable any other standalone cheat sheet mods.")]
+        [DefaultValue(false)]
+        [Display(Order = 3)]
+        public bool CrosswordsCheat { get; set; } = false;
+
+        [Category("Cheat Sheets")]
+        [DisplayName("TV Quiz Cheat Sheet")]
+        [Description("Shows the correct answers to the TV quizzes. Disable any other standalone cheat sheet mods.")]
+        [DefaultValue(false)]
+        [Display(Order = 4)]
+        public bool TVQuizCheat { get; set; } = false;
+
+        [Category("Cheat Sheets")]
+        [DisplayName("Correct Darts Options")]
+        [Description("Highlights the dialogue options to have party members get the 0 score at darts. Disable any other standalone cheat sheet mods.")]
+        [DefaultValue(false)]
+        [Display(Order = 5)]
+        public bool DartsCheat { get; set; } = false;
+
         [Category("Gameplay")]
         [DisplayName("Weapons and Equipment Patch")]
         [Description("Weapon Equipment patch for Rose Violet. Guns with 10 rounds and rebalanced damage.")]
         [DefaultValue(false)]
-        [Display(Order = 3)]
+        [Display(Order = 6)]
         public bool WeaponsPatch { get; set; } = false;
 
         [Category("Optional")]
         [DisplayName("Ryuji Palace Scene (Rose is angry)")]
         [Description("Modified Ryuji Palace Scene. Disable it if you use the CBT option.")]
         [DefaultValue(false)]
-        [Display(Order = 4)]
+        [Display(Order = 7)]
         public bool RyujiOuch { get; set; } = false;
 
     }

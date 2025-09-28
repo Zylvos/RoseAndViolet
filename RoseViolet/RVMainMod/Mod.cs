@@ -44,6 +44,18 @@ namespace RVMainMod
             if (_configuration.ConfidantCheat)
                 criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "ConfidantCheatSheet"));
 
+            // Crosswords
+            if (_configuration.CrosswordsCheat)
+                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "CrosswordsCheatSheet"));
+
+            // TV
+            if (_configuration.TVQuizCheat)
+                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "TVCheatSheet"));
+
+            // Darts
+            if (_configuration.DartsCheat)
+                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "DartCheatSheet"));
+
             // Weapons
             if (_configuration.WeaponsPatch)
                 criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "WeaponsAndEquipment"));
