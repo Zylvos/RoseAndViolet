@@ -39,6 +39,9 @@ namespace RVAltModels
             if (costumeCtl == null || !costumeCtl.TryGetTarget(out var costumeApi)) { _logger.WriteLine("Costume API missing → Costumes broken.", System.Drawing.Color.Red); return; }
             if (spdEmuCtl == null || !spdEmuCtl.TryGetTarget(out var spdEmu)) { _logger.WriteLine("SPD Emu missing → SPD merges broken.", System.Drawing.Color.Red); return; }
 
+            // Exit model (black leotard)
+            BindAllFilesIn(Path.Combine("OptionalModFiles", "ExitModel"), modDir, criFsApi, modId);
+
             // Leotard Overhaul (Pure White or Red and Gold)
             if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite || _configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
             {
