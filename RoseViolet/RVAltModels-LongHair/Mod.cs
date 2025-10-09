@@ -54,9 +54,42 @@ namespace RVAltModelsLongHair
             if (_configuration.GoldRapiers)
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "GoldenRapiers"), modDir, criFsApi, modId);
 
-            // Blue Dress
-            if (_configuration.BlueDressRV)
-                BindAllFilesIn(Path.Combine("OptionalModFiles", "BlueDress"), modDir, criFsApi, modId);
+           // Winter Casual
+            if (_configuration.WinterCasualValue != Config.WinterCasualRV.Default)
+                {
+                    string WinterCasualFolder = "";
+                    if (_configuration.WinterCasualValue == Config.WinterCasualRV.BlueDressRV)
+                        {
+                            WinterCasualFolder = "BlueDress";
+                        }
+                    else if (_configuration.WinterCasualValue == Config.WinterCasualRV.YukikoWinterCasualRV)
+                        {
+                            WinterCasualFolder = "YukikoWinterCasual";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterCasualOutfit", WinterCasualFolder), modDir, criFsApi, modId);
+                }
+
+            // Midwinter Casual
+            if (_configuration.MidWinterCasualValue != Config.MidWinterCasualRV.Default)
+                {
+                    string MidWinterCasualFolder = "";
+                    if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.RiseMidwinterCasualRV)
+                        {
+                            MidWinterCasualFolder = "RiseMidwinterCasual";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterCasualOutfit", MidWinterCasualFolder), modDir, criFsApi, modId);
+                }
+
+            // Midwinter Uniform
+            if (_configuration.MidWinterUniformValue != Config.MidWinterUniformRV.Default)
+                {
+                    string MidWinterUniformFolder = "";
+                    if (_configuration.MidWinterUniformValue == Config.MidWinterUniformRV.RiseMidwinterUniformRV)
+                        {
+                            MidWinterUniformFolder = "RiseMidwinterUniform";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterUniform", MidWinterUniformFolder), modDir, criFsApi, modId);
+                }
 
             // Fuuka Dress
             if (_configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue || _configuration.SummerDressValue == Config.SummerDressRV.FuukaWhite)

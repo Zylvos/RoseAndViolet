@@ -53,6 +53,36 @@ namespace RVAltModelsLongHair.Configuration
             FuukaWhite,
         }
 
+        public enum WinterCasualRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Blue dress")]
+            BlueDressRV,
+
+            [Display(Name = "Yukiko's winter casual")]
+            YukikoWinterCasualRV,
+        }
+
+        public enum MidWinterCasualRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Rise's Midwinter casual")]
+            RiseMidwinterCasualRV,
+        }
+        
+        public enum MidWinterUniformRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Rise's Midwinter coat")]
+            RiseMidwinterUniformRV,
+        }                       
+
         public enum BustupRV
         {
             [Display(Name = "Default")]
@@ -141,11 +171,11 @@ namespace RVAltModelsLongHair.Configuration
         public bool GoldRapiers { get; set; } = false;
 
         [Category("Model")]
-        [DisplayName("Blue Dress over Winter Casual (R&V)")]
-        [Description("Replaces the player's winter casual outfit with the blue dress from Sumire's SL.")]
-        [DefaultValue(false)]
+        [DisplayName("Winter Casual outfit")]
+        [Description("Select your preferred Winter Casual outfit. Blue dress from Sumire's SL. Yukiko's outfit by Mugikomachi.")]
+        [DefaultValue(WinterCasualRV.Default)]
         [Display(Order = 6)]
-        public bool BlueDressRV { get; set; } = false;
+        public WinterCasualRV WinterCasualValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Summer Casual outfit")]
@@ -155,18 +185,32 @@ namespace RVAltModelsLongHair.Configuration
         public SummerDressRV SummerDressValue { get; set; }
 
         [Category("Model")]
-        [DisplayName("Lawson Outfit over 777 Outfit")]
-        [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
-        [DefaultValue(false)]
+        [DisplayName("Midwinter Casual outfit")]
+        [Description("Select your preferred Midwinter Casual outfit. Rise's outfit by Mugikomachi.")]
+        [DefaultValue(MidWinterCasualRV.Default)]
         [Display(Order = 8)]
-        public bool LawsonRV { get; set; } = false;
+        public MidWinterCasualRV MidWinterCasualValue { get; set; }
+
+        [Category("Model")]
+        [DisplayName("Midwinter Uniform")]
+        [Description("Select your preferred Midwinter uniform. Rise's uniform by Mugikomachi.")]
+        [DefaultValue(MidWinterUniformRV.Default)]
+        [Display(Order = 9)]
+        public MidWinterUniformRV MidWinterUniformValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Workout outfit")]
-        [Description("Choose your prefered workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
+        [Description("Choose your preferred workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
         [DefaultValue(TracksuitRV.Default)]
-        [Display(Order = 9)]
+        [Display(Order = 10)]
         public TracksuitRV TracksuitValue { get; set; }
+
+        [Category("Model")]
+        [DisplayName("Lawson Outfit over 777 Outfit")]
+        [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
+        [DefaultValue(false)]
+        [Display(Order = 11)]
+        public bool LawsonRV { get; set; } = false;
 
     }
 
