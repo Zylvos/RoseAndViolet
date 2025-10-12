@@ -63,6 +63,10 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Yukiko's winter casual")]
             YukikoWinterCasualRV,
+
+            [Display(Name = "Yukari's winter casual")]
+            YukariWinterCasualRV,
+
         }
 
         public enum MidWinterCasualRV
@@ -172,7 +176,7 @@ namespace RVAltModelsLongHair.Configuration
 
         [Category("Model")]
         [DisplayName("Winter Casual outfit")]
-        [Description("Select your preferred Winter Casual outfit. Blue dress from Sumire's SL. Yukiko's outfit by Mugikomachi.")]
+        [Description("Select your preferred Winter Casual outfit. Blue dress from Sumire's SL. Yukiko's and Yukari's outfits by Mugikomachi.")]
         [DefaultValue(WinterCasualRV.Default)]
         [Display(Order = 6)]
         public WinterCasualRV WinterCasualValue { get; set; }
