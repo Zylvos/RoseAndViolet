@@ -95,6 +95,17 @@ namespace RVAltModels
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterUniform", MidWinterUniformFolder), modDir, criFsApi, modId);
                 }
 
+            // Summer Uniform
+            if (_configuration.SummerUniformValue != Config.SummerUniformRV.Default)
+                {
+                    string SummerUniformFolder = "";
+                    if (_configuration.SummerUniformValue == Config.SummerUniformRV.SummerUnifWhiteShirtRV)
+                        {
+                            SummerUniformFolder = "WhiteShirt";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerUniform", SummerUniformFolder), modDir, criFsApi, modId);
+                }
+
             // Fuuka Dress
             if (_configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue || _configuration.SummerDressValue == Config.SummerDressRV.FuukaWhite)
             {

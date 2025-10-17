@@ -70,6 +70,10 @@ namespace RVAltModelsLongHair
                         {
                             WinterCasualFolder = "YukariWinterCasual";
                         }
+                    else if (_configuration.WinterCasualValue == Config.WinterCasualRV.YukariWinterCasualBlackRV)
+                        {
+                            WinterCasualFolder = "YukariWinterCasualBlackRibbon";
+                        }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterCasualOutfit", WinterCasualFolder), modDir, criFsApi, modId);
                 }
 
@@ -93,6 +97,17 @@ namespace RVAltModelsLongHair
                             MidWinterUniformFolder = "RiseMidwinterUniform";
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterUniform", MidWinterUniformFolder), modDir, criFsApi, modId);
+                }
+
+            // Summer Uniform
+            if (_configuration.SummerUniformValue != Config.SummerUniformRV.Default)
+                {
+                    string SummerUniformFolder = "";
+                    if (_configuration.SummerUniformValue == Config.SummerUniformRV.SummerUnifWhiteShirtRV)
+                        {
+                            SummerUniformFolder = "WhiteShirt";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerUniform", SummerUniformFolder), modDir, criFsApi, modId);
                 }
 
             // Fuuka Dress

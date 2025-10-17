@@ -53,6 +53,15 @@ namespace RVAltModels.Configuration
             FuukaWhite,
         }
 
+        public enum SummerUniformRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Shujin's white shirt")]
+            SummerUnifWhiteShirtRV,
+        }
+
         public enum WinterCasualRV
         {
             [Display(Name = "Default")]
@@ -200,24 +209,31 @@ namespace RVAltModels.Configuration
         public MidWinterCasualRV MidWinterCasualValue { get; set; }
 
         [Category("Model")]
+        [DisplayName("Summer Uniform")]
+        [Description("Select your preferred Summer uniform. White Shirt uniform by Zylvos.")]
+        [DefaultValue(SummerUniformRV.Default)]
+        [Display(Order = 9)]
+        public SummerUniformRV SummerUniformValue { get; set; }
+
+        [Category("Model")]
         [DisplayName("Midwinter Uniform")]
         [Description("Select your preferred Midwinter uniform. Rise's uniform by Mugikomachi.")]
         [DefaultValue(MidWinterUniformRV.Default)]
-        [Display(Order = 9)]
+        [Display(Order = 10)]
         public MidWinterUniformRV MidWinterUniformValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Workout outfit")]
         [Description("Choose your preferred workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
         [DefaultValue(TracksuitRV.Default)]
-        [Display(Order = 10)]
+        [Display(Order = 11)]
         public TracksuitRV TracksuitValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Lawson Outfit over 777 Outfit")]
         [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
         [DefaultValue(false)]
-        [Display(Order = 11)]
+        [Display(Order = 12)]
         public bool LawsonRV { get; set; } = false;
 
     }
