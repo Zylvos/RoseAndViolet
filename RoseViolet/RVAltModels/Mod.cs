@@ -66,6 +66,10 @@ namespace RVAltModels
                         {
                             WinterCasualFolder = "YukikoWinterCasual";
                         }
+                    else if (_configuration.WinterCasualValue == Config.WinterCasualRV.YukikoWinterCasualRedRV)
+                        {
+                            WinterCasualFolder = "YukikoWinterCasualRedRibbon";
+                        }
                     else if (_configuration.WinterCasualValue == Config.WinterCasualRV.YukariWinterCasualRV)
                         {
                             WinterCasualFolder = "YukariWinterCasual";

@@ -73,6 +73,9 @@ namespace RVAltModels.Configuration
             [Display(Name = "Yukiko's winter casual")]
             YukikoWinterCasualRV,
 
+            [Display(Name = "Yukiko's winter casual (Red ribbon)")]
+            YukikoWinterCasualRedRV,
+
             [Display(Name = "Yukari's winter casual")]
             YukariWinterCasualRV,
 
