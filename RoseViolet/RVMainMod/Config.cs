@@ -65,18 +65,25 @@ namespace RVMainMod.Configuration
         [Display(Order = 5)]
         public bool DartsCheat { get; set; } = false;
 
+        [Category("Cheat Sheets")]
+        [DisplayName("Negotiation Cheat Sheet")]
+        [Description("Shows the optimal answers for each type of shadow personality (G = Gloomy, U = Upbeat, T = Timid, I = Irritable, ? = No idea). Disable any other standalone cheat sheet mods.")]
+        [DefaultValue(false)]
+        [Display(Order = 6)]
+        public bool NegotiationCheat { get; set; } = false;
+
         [Category("Gameplay")]
         [DisplayName("Weapons and Equipment Patch")]
         [Description("Weapon Equipment patch for Rose Violet. Guns with 10 rounds and rebalanced damage.")]
         [DefaultValue(false)]
-        [Display(Order = 6)]
+        [Display(Order = 7)]
         public bool WeaponsPatch { get; set; } = false;
 
         [Category("Optional")]
         [DisplayName("Ryuji Palace Scene (Rose is angry)")]
         [Description("Modified Ryuji Palace Scene. Disable it if you use the CBT option.")]
         [DefaultValue(false)]
-        [Display(Order = 7)]
+        [Display(Order = 8)]
         public bool RyujiOuch { get; set; } = false;
 
     }

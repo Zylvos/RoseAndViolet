@@ -56,6 +56,10 @@ namespace RVMainMod
             if (_configuration.DartsCheat)
                 criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "DartCheatSheet"));
 
+            // Negotiation
+            if (_configuration.NegotiationCheat)
+                criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "NegotiationCheatSheet"));
+
             // Weapons
             if (_configuration.WeaponsPatch)
                 criFsApi.AddProbingPath(Path.Combine(modDir, "OptionalModFiles", "WeaponsAndEquipment"));
