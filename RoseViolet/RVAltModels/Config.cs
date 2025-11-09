@@ -51,6 +51,12 @@ namespace RVAltModels.Configuration
 
             [Display(Name = "Fuuka's dress (White Ribbon)")]
             FuukaWhite,
+
+            [Display(Name = "Eiko's casual outfit")]
+            EikoCasualRV,
+
+            [Display(Name = "Mitsuru's summer uniform")]
+            MitsuruUniformCasual,
         }
 
         public enum SummerUniformRV
@@ -199,7 +205,7 @@ namespace RVAltModels.Configuration
 
         [Category("Model")]
         [DisplayName("Summer Casual outfit")]
-        [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress by MyTamagos.")]
+        [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress (MyTamagos), Eiko's outfit (Zylvos), Mitsuru's uniform (Bester)")]
         [DefaultValue(SummerDressRV.Default)]
         [Display(Order = 7)]
         public SummerDressRV SummerDressValue { get; set; }

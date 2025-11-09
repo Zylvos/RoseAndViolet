@@ -110,12 +110,28 @@ namespace RVAltModelsLongHair
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerUniform", SummerUniformFolder), modDir, criFsApi, modId);
                 }
 
-            // Fuuka Dress
-            if (_configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue || _configuration.SummerDressValue == Config.SummerDressRV.FuukaWhite)
-            {
-                string summersuitFolder = _configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue ? "SummerDressBlue" : "SummerDressWhite";
-                BindAllFilesIn(Path.Combine("OptionalModFiles", summersuitFolder), modDir, criFsApi, modId);
-            }
+            // Summer casual
+            if (_configuration.SummerDressValue != Config.SummerDressRV.Default)
+                {
+                    string SummerCasualFolder = "";
+                    if (_configuration.SummerDressValue == Config.SummerDressRV.FuukaBlue)
+                        {
+                            SummerCasualFolder = "SummerDressBlue";
+                        }
+                    else if (_configuration.SummerDressValue == Config.SummerDressRV.FuukaWhite)
+                        {
+                            SummerCasualFolder = "SummerDressWhite";
+                        }
+                    else if (_configuration.SummerDressValue == Config.SummerDressRV.EikoCasualRV)
+                        {
+                            SummerCasualFolder = "EikoCasual";
+                        }
+                    else if (_configuration.SummerDressValue == Config.SummerDressRV.MitsuruUniformCasual)
+                        {
+                            SummerCasualFolder = "MitsuruSummerUniform";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerCasualOutfit", SummerCasualFolder), modDir, criFsApi, modId);
+                }
 
             // Bustup
             if (_configuration.BustupValue != Config.BustupRV.Default)
