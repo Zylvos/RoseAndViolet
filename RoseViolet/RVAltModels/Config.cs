@@ -68,6 +68,15 @@ namespace RVAltModels.Configuration
             SummerUnifWhiteShirtRV,
         }
 
+        public enum WinterUniformRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Shujin's turtleneck and suspenders")]
+            WinterUnifTurtleSuspendRV,
+        }
+
         public enum WinterCasualRV
         {
             [Display(Name = "Default")]
@@ -205,7 +214,7 @@ namespace RVAltModels.Configuration
 
         [Category("Model")]
         [DisplayName("Summer Casual outfit")]
-        [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress (MyTamagos), Eiko's outfit (Zylvos), Mitsuru's uniform (Bester)")]
+        [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress (MyTamagos), Eiko's outfit (Zylvos), Mitsuru's uniform (Bester).")]
         [DefaultValue(SummerDressRV.Default)]
         [Display(Order = 7)]
         public SummerDressRV SummerDressValue { get; set; }
@@ -218,31 +227,38 @@ namespace RVAltModels.Configuration
         public MidWinterCasualRV MidWinterCasualValue { get; set; }
 
         [Category("Model")]
+        [DisplayName("Winter Uniform")]
+        [Description("Select your preferred Winter uniform. Turtleneck with suspenders by Bester.")]
+        [DefaultValue(WinterUniformRV.Default)]
+        [Display(Order = 9)]
+        public WinterUniformRV WinterUniformValue { get; set; }
+
+        [Category("Model")]
         [DisplayName("Summer Uniform")]
         [Description("Select your preferred Summer uniform. White Shirt uniform by Zylvos.")]
         [DefaultValue(SummerUniformRV.Default)]
-        [Display(Order = 9)]
+        [Display(Order = 10)]
         public SummerUniformRV SummerUniformValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Midwinter Uniform")]
         [Description("Select your preferred Midwinter uniform. Rise's uniform by Mugikomachi.")]
         [DefaultValue(MidWinterUniformRV.Default)]
-        [Display(Order = 10)]
+        [Display(Order = 11)]
         public MidWinterUniformRV MidWinterUniformValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Workout outfit")]
         [Description("Choose your preferred workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
         [DefaultValue(TracksuitRV.Default)]
-        [Display(Order = 11)]
+        [Display(Order = 12)]
         public TracksuitRV TracksuitValue { get; set; }
 
         [Category("Model")]
         [DisplayName("Lawson Outfit over 777 Outfit")]
         [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
         [DefaultValue(false)]
-        [Display(Order = 12)]
+        [Display(Order = 13)]
         public bool LawsonRV { get; set; } = false;
 
     }

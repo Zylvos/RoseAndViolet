@@ -77,6 +77,17 @@ namespace RVAltModelsLongHair
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterCasualOutfit", WinterCasualFolder), modDir, criFsApi, modId);
                 }
 
+            // Winter Uniform
+            if (_configuration.WinterUniformValue != Config.WinterUniformRV.Default)
+                {
+                    string WinterUniformFolder = "";
+                    if (_configuration.WinterUniformValue == Config.WinterUniformRV.WinterUnifTurtleSuspendRV)
+                        {
+                            WinterUniformFolder = "TurtleneckSuspenders";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterUniform", WinterUniformFolder), modDir, criFsApi, modId);
+                }
+
             // Midwinter Casual
             if (_configuration.MidWinterCasualValue != Config.MidWinterCasualRV.Default)
                 {
