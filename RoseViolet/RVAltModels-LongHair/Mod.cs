@@ -96,6 +96,10 @@ namespace RVAltModelsLongHair
                         {
                             MidWinterCasualFolder = "RiseMidwinterCasual";
                         }
+                    else if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.FurCoatCasualRV)
+                        {
+                            MidWinterCasualFolder = "FurCoatCasual";
+                        }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterCasualOutfit", MidWinterCasualFolder), modDir, criFsApi, modId);
                 }
 
@@ -106,6 +110,10 @@ namespace RVAltModelsLongHair
                     if (_configuration.MidWinterUniformValue == Config.MidWinterUniformRV.RiseMidwinterUniformRV)
                         {
                             MidWinterUniformFolder = "RiseMidwinterUniform";
+                        }
+                    else if (_configuration.MidWinterUniformValue == Config.MidWinterUniformRV.FurCoatUniformRV)
+                        {
+                            MidWinterUniformFolder = "FurCoatUniform";
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterUniform", MidWinterUniformFolder), modDir, criFsApi, modId);
                 }

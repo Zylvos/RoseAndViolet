@@ -96,6 +96,10 @@ namespace RVAltModels
                         {
                             MidWinterCasualFolder = "RiseMidwinterCasual";
                         }
+                    else if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.FurCoatCasualRV)
+                        {
+                            MidWinterCasualFolder = "FurCoatCasual";
+                        }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterCasualOutfit", MidWinterCasualFolder), modDir, criFsApi, modId);
                 }
 
@@ -106,6 +110,10 @@ namespace RVAltModels
                     if (_configuration.MidWinterUniformValue == Config.MidWinterUniformRV.RiseMidwinterUniformRV)
                         {
                             MidWinterUniformFolder = "RiseMidwinterUniform";
+                        }
+                    else if (_configuration.MidWinterUniformValue == Config.MidWinterUniformRV.FurCoatUniformRV)
+                        {
+                            MidWinterUniformFolder = "FurCoatUniform";
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterUniform", MidWinterUniformFolder), modDir, criFsApi, modId);
                 }
@@ -164,6 +172,10 @@ namespace RVAltModels
                     if (_configuration.BustupValue == Config.BustupRV.L7M3RV)
                         {
                         BustupFolder = "L7M3";
+                        }
+                    else if (_configuration.BustupValue == Config.BustupRV.L7M3V2RV)
+                        {
+                        BustupFolder = "L7M3V2";    
                         }
                     else if (_configuration.BustupValue == Config.BustupRV.LegacyV1)
                         {

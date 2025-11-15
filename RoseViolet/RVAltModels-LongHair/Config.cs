@@ -103,6 +103,9 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Rise's Midwinter casual")]
             RiseMidwinterCasualRV,
+
+            [Display(Name = "Fancy fur coat casual")]
+            FurCoatCasualRV,
         }
         
         public enum MidWinterUniformRV
@@ -112,6 +115,9 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Rise's Midwinter coat")]
             RiseMidwinterUniformRV,
+
+            [Display(Name = "Fancy fur coat uniform")]
+            FurCoatUniformRV,
         }                       
 
         public enum BustupRV
@@ -217,7 +223,7 @@ namespace RVAltModelsLongHair.Configuration
 
         [Category("Model")]
         [DisplayName("Midwinter Casual outfit")]
-        [Description("Select your preferred Midwinter Casual outfit. Rise's outfit by Mugikomachi.")]
+        [Description("Select your preferred Midwinter Casual outfit. Rise's outfit (Mugikomachi). Fancy Fur Coat (Bester).")]
         [DefaultValue(MidWinterCasualRV.Default)]
         [Display(Order = 8)]
         public MidWinterCasualRV MidWinterCasualValue { get; set; }
@@ -238,7 +244,7 @@ namespace RVAltModelsLongHair.Configuration
 
         [Category("Model")]
         [DisplayName("Midwinter Uniform")]
-        [Description("Select your preferred Midwinter uniform. Rise's uniform by Mugikomachi.")]
+        [Description("Select your preferred Midwinter uniform. Rise's coat (Mugikomachi). Fancy Fur Coat (Bester).")]
         [DefaultValue(MidWinterUniformRV.Default)]
         [Display(Order = 11)]
         public MidWinterUniformRV MidWinterUniformValue { get; set; }
