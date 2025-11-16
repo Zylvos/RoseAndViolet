@@ -126,6 +126,10 @@ namespace RVAltModelsLongHair
                         {
                             SummerUniformFolder = "WhiteShirt";
                         }
+                    else if (_configuration.SummerUniformValue == Config.SummerUniformRV.KotomoUniformRV)
+                        {
+                            SummerUniformFolder = "KotomoUniform";
+                        }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerUniform", SummerUniformFolder), modDir, criFsApi, modId);
                 }
 
@@ -203,11 +207,23 @@ namespace RVAltModelsLongHair
                 BindAllFilesIn(Path.Combine("OptionalModFiles", "Lawson"), modDir, criFsApi, modId);
 
             // Workout outfit
-            if (_configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit || _configuration.TracksuitValue == Config.TracksuitRV.ConceptArtTracksuit)
-            {
-                string TracksuitFolder = _configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit ? "BlackTracksuit" : "TracksuitConceptArt";
-                BindAllFilesIn(Path.Combine("OptionalModFiles", "WorkoutOutfit", TracksuitFolder), modDir, criFsApi, modId);
-            }
+            if (_configuration.TracksuitValue != Config.TracksuitRV.Default)
+                {
+                    string TracksuitFolder = "";
+                    if (_configuration.TracksuitValue == Config.TracksuitRV.BlackTracksuit)
+                        {
+                            TracksuitFolder = "BlackTracksuit";
+                        }
+                    else if (_configuration.TracksuitValue == Config.TracksuitRV.ConceptArtTracksuit)
+                        {
+                            TracksuitFolder = "TracksuitConceptArt";
+                        }
+                    else if (_configuration.TracksuitValue == Config.TracksuitRV.TamayoGym)
+                        {
+                            TracksuitFolder = "TamayoOutfit";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "WorkoutOutfit", TracksuitFolder), modDir, criFsApi, modId);
+                } 
 
         }
 

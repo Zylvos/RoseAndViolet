@@ -66,6 +66,9 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Shujin's white shirt")]
             SummerUnifWhiteShirtRV,
+
+            [Display(Name = "Kotomo's Shujin uniform")]
+            KotomoUniformRV, 
         }
 
         public enum WinterUniformRV
@@ -154,6 +157,9 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Concept Art Tracksuit")]
             ConceptArtTracksuit,
+
+            [Display(Name = "Tamayo's Gym Outfit")]
+            TamayoGym, 
         }
 
         public enum AOACutinRV
@@ -237,7 +243,7 @@ namespace RVAltModelsLongHair.Configuration
 
         [Category("Model")]
         [DisplayName("Summer Uniform")]
-        [Description("Select your preferred Summer uniform. White Shirt uniform by Zylvos.")]
+        [Description("Select your preferred Summer uniform. White Shirt Uniform (Zylvos). Kotomo's uniform (Croissant Guard).")]
         [DefaultValue(SummerUniformRV.Default)]
         [Display(Order = 10)]
         public SummerUniformRV SummerUniformValue { get; set; }
@@ -251,7 +257,7 @@ namespace RVAltModelsLongHair.Configuration
 
         [Category("Model")]
         [DisplayName("Workout outfit")]
-        [Description("Choose your preferred workout outfit. Default, recolored Shujin tracksuit or Concept Art Tracksuit by MyTamagos.")]
+        [Description("Choose your preferred workout outfit. Recolored Shujin tracksuit (Wisteria), Concept Art Tracksuit (MyTamagos), Tamayo's gym outfit (Croissant Guard).")]
         [DefaultValue(TracksuitRV.Default)]
         [Display(Order = 12)]
         public TracksuitRV TracksuitValue { get; set; }
