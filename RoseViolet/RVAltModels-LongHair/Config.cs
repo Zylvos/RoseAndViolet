@@ -31,7 +31,7 @@ namespace RVAltModelsLongHair.Configuration
         */
         public enum PhantomSuit
         {
-            [Display(Name = "Default")]
+            [Display(Name = "Black (Default)")]
             Default,
 
             [Display(Name = "Pure White")]
@@ -97,6 +97,31 @@ namespace RVAltModelsLongHair.Configuration
             [Display(Name = "Yukari's winter casual (Black ribbon)")]
             YukariWinterCasualBlackRV,            
 
+            [Display(Name = "Comfy Hoodie")]
+            ComfyHoodieRV,
+
+        }
+
+        public enum IncognitoRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Default winter casual")]
+            WinterCasualIncognitoRV,
+
+            [Display(Name = "Blue dress")]
+            BlueDressIncognitoRV,
+
+            [Display(Name = "Yukiko's winter casual")]
+            YukikoCasualIncognitoRV,
+
+            [Display(Name = "Yukari's winter casual")]
+            YukariCasualIncognitoRV,
+
+            [Display(Name = "Comfy Hoodie")]
+            ComfyHoodieIncognitoRV,
+
         }
 
         public enum MidWinterCasualRV
@@ -122,6 +147,15 @@ namespace RVAltModelsLongHair.Configuration
             [Display(Name = "Fancy fur coat uniform")]
             FurCoatUniformRV,
         }                       
+
+        public enum PajamasRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Star pajamas")]
+            StarPajamasRV,
+        } 
 
         public enum BustupRV
         {
@@ -171,102 +205,116 @@ namespace RVAltModelsLongHair.Configuration
             Johesy,
         }        
 
-        [Category("Bustup")]
+        [Category("Bustups")]
         [DisplayName("Dialogue Portrait")]
         [Description("Select your preferred dialogue bustups.")]
         [DefaultValue(BustupRV.Default)]
         [Display(Order = 0)]
         public BustupRV BustupValue { get; set; }
 
-        [Category("Bustup")]
+        [Category("Bustups")]
         [DisplayName("Epic Partypanel In Color")]
         [Description("Colorful bustup in battle. By Zrego and Wisteria.")]
         [DefaultValue(false)]
         [Display(Order = 1)]
         public bool ColorPartyPanelRV { get; set; } = false;
 
-        [Category("Bustup")]
+        [Category("Bustups")]
         [DisplayName("AOA Cutin")]
         [Description("Choose your prefered AOA. Default by MyTamagos.")]
         [DefaultValue(AOACutinRV.Default)]
         [Display(Order = 2)]
         public AOACutinRV AOACutinValue { get; set; }
 
-        [Category("Model")]
-        [DisplayName("Black Leotard Overhaul")]
-        [Description("Replaces the Black Leotard phantom suit with a recoloured Leotard.")]
+        [Category("Metaverse models")]
+        [DisplayName("Phantom Thief outfit")]
+        [Description("Select your preferred color for the Phantom Thief outfit. Bustups and AOA finisher will be changed accordingly.")]
         [DefaultValue(PhantomSuit.Default)]
         [Display(Order = 3)]
         public PhantomSuit PhantomSuitValue { get; set; }
 
-        [Category("Model")]
+        [Category("Metaverse models")]
         [DisplayName("No All-Out-Attack Portrait")]
         [Description("Removes the All-Out-Attack finisher art. By lyncpk.")]
         [DefaultValue(NoAOAportrait.Default)]
         [Display(Order = 4)]
         public NoAOAportrait AOAValue { get; set; }
 
-        [Category("Model")]
+        [Category("Metaverse models")]
         [DisplayName("Golden Rapiers")]
         [Description("For usage with the Phantom Suit Overhaul, disable if you want regular Rapiers or other weapon model mods to work.")]
         [DefaultValue(false)]
         [Display(Order = 5)]
         public bool GoldRapiers { get; set; } = false;
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
         [DisplayName("Winter Casual outfit")]
-        [Description("Select your preferred Winter Casual outfit. Blue dress from Sumire's SL. Yukiko's and Yukari's outfits by Mugikomachi.")]
+        [Description("Select your preferred Winter Casual outfit.")]
         [DefaultValue(WinterCasualRV.Default)]
         [Display(Order = 6)]
         public WinterCasualRV WinterCasualValue { get; set; }
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
         [DisplayName("Summer Casual outfit")]
-        [Description("Select your preferred Summer casual outfit (default : polka dots shirt and shorts) Fuuka's dress (MyTamagos), Eiko's outfit (Zylvos), Mitsuru's uniform (Bester).")]
+        [Description("Select your preferred Summer casual outfit.")]
         [DefaultValue(SummerDressRV.Default)]
         [Display(Order = 7)]
         public SummerDressRV SummerDressValue { get; set; }
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
         [DisplayName("Midwinter Casual outfit")]
-        [Description("Select your preferred Midwinter Casual outfit. Rise's outfit (Mugikomachi). Fancy Fur Coat (Bester).")]
+        [Description("Select your preferred Midwinter Casual outfit.")]
         [DefaultValue(MidWinterCasualRV.Default)]
         [Display(Order = 8)]
         public MidWinterCasualRV MidWinterCasualValue { get; set; }
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
         [DisplayName("Winter Uniform")]
-        [Description("Select your preferred Winter uniform. Turtleneck with suspenders by Bester.")]
+        [Description("Select your preferred Winter uniform.")]
         [DefaultValue(WinterUniformRV.Default)]
         [Display(Order = 9)]
         public WinterUniformRV WinterUniformValue { get; set; }
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
         [DisplayName("Summer Uniform")]
-        [Description("Select your preferred Summer uniform. White Shirt Uniform (Zylvos). Kotomo's uniform (Croissant Guard).")]
+        [Description("Select your preferred Summer uniform.")]
         [DefaultValue(SummerUniformRV.Default)]
         [Display(Order = 10)]
         public SummerUniformRV SummerUniformValue { get; set; }
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
         [DisplayName("Midwinter Uniform")]
-        [Description("Select your preferred Midwinter uniform. Rise's coat (Mugikomachi). Fancy Fur Coat (Bester).")]
+        [Description("Select your preferred Midwinter uniform.")]
         [DefaultValue(MidWinterUniformRV.Default)]
         [Display(Order = 11)]
         public MidWinterUniformRV MidWinterUniformValue { get; set; }
 
-        [Category("Model")]
-        [DisplayName("Workout outfit")]
-        [Description("Choose your preferred workout outfit. Recolored Shujin tracksuit (Wisteria), Concept Art Tracksuit (MyTamagos), Tamayo's gym outfit (Croissant Guard).")]
-        [DefaultValue(TracksuitRV.Default)]
+        [Category("Overworld outfits")]
+        [DisplayName("Incognito outfit")]
+        [Description("Select your preferred incognito outfit.")]
+        [DefaultValue(IncognitoRV.Default)]
         [Display(Order = 12)]
+        public IncognitoRV IncognitoValue { get; set; }
+
+        [Category("Overworld outfits")]
+        [DisplayName("Workout outfit")]
+        [Description("Choose your preferred workout outfit.")]
+        [DefaultValue(TracksuitRV.Default)]
+        [Display(Order = 13)]
         public TracksuitRV TracksuitValue { get; set; }
 
-        [Category("Model")]
+        [Category("Overworld outfits")]
+        [DisplayName("Loungewear")]
+        [Description("Choose your preferred night time outfit.")]
+        [DefaultValue(PajamasRV.Default)]
+        [Display(Order = 14)]
+        public PajamasRV PajamasValue { get; set; }
+
+        [Category("Overworld outfits")]
         [DisplayName("Lawson Outfit over 777 Outfit")]
         [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
         [DefaultValue(false)]
-        [Display(Order = 13)]
+        [Display(Order = 15)]
         public bool LawsonRV { get; set; } = false;
 
     }

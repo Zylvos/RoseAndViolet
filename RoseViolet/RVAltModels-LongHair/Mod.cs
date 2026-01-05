@@ -74,7 +74,38 @@ namespace RVAltModelsLongHair
                         {
                             WinterCasualFolder = "YukariWinterCasualBlackRibbon";
                         }
+                    else if (_configuration.WinterCasualValue == Config.WinterCasualRV.ComfyHoodieRV)
+                        {
+                            WinterCasualFolder = "ComfyHoodie";
+                        }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterCasualOutfit", WinterCasualFolder), modDir, criFsApi, modId);
+                }
+
+            // Incognito
+            if (_configuration.IncognitoValue != Config.IncognitoRV.Default)
+                {
+                    string IncognitoFolder = "";
+                    if (_configuration.IncognitoValue == Config.IncognitoRV.WinterCasualIncognitoRV)
+                        {
+                            IncognitoFolder = "BaseWinterCasual";
+                        }                    
+                    else if (_configuration.IncognitoValue == Config.IncognitoRV.BlueDressIncognitoRV)
+                        {
+                            IncognitoFolder = "BlueDress";
+                        }
+                    else if (_configuration.IncognitoValue == Config.IncognitoRV.YukikoCasualIncognitoRV)
+                        {
+                            IncognitoFolder = "YukikoWinterCasual";
+                        }
+                    else if (_configuration.IncognitoValue == Config.IncognitoRV.YukariCasualIncognitoRV)
+                        {
+                            IncognitoFolder = "YukariWinterCasual";
+                        }
+                    else if (_configuration.IncognitoValue == Config.IncognitoRV.ComfyHoodieIncognitoRV)
+                        {
+                            IncognitoFolder = "ComfyHoodie";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "IncognitoOutfit", IncognitoFolder), modDir, criFsApi, modId);
                 }
 
             // Winter Uniform
@@ -155,6 +186,18 @@ namespace RVAltModelsLongHair
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "SummerCasualOutfit", SummerCasualFolder), modDir, criFsApi, modId);
                 }
+
+            // Loungewear
+            if (_configuration.PajamasValue != Config.PajamasRV.Default)
+                {
+                    string PajamasFolder = "";
+                    if (_configuration.PajamasValue == Config.PajamasRV.StarPajamasRV)
+                        {
+                            PajamasFolder = "StarPajamas";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Loungewear", PajamasFolder), modDir, criFsApi, modId);
+                }
+
 
             // Bustup
             if (_configuration.BustupValue != Config.BustupRV.Default)
