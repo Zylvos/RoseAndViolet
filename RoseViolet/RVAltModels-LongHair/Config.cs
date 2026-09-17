@@ -78,6 +78,9 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Shujin's turtleneck and suspenders")]
             WinterUnifTurtleSuspendRV,
+
+            [Display(Name = "Kotomo's beige Shujin uniform")]
+            WinterUnifKotomoBeigeRV,
         }
 
         public enum WinterCasualRV
@@ -134,6 +137,9 @@ namespace RVAltModelsLongHair.Configuration
 
             [Display(Name = "Fancy fur coat casual")]
             FurCoatCasualRV,
+
+            [Display(Name = "Micaiah's Midwinter casual")]
+            MicaiahMWCasualRV,
         }
         
         public enum MidWinterUniformRV
@@ -183,7 +189,7 @@ namespace RVAltModelsLongHair.Configuration
 
         public enum TracksuitRV
         {
-            [Display(Name = "Red tank top (Default)")]
+            [Display(Name = "Default")]
             Default,
 
             [Display(Name = "Black Tracksuit")]
@@ -196,125 +202,142 @@ namespace RVAltModelsLongHair.Configuration
             TamayoGym, 
         }
 
+        public enum StudentIDRV
+        {
+            [Display(Name = "Default")]
+            Default,
+
+            [Display(Name = "Hair down (by shadows0)")]
+            LongHairAlt,
+          
+        }
+
         public enum AOACutinRV
         {
             [Display(Name = "Default")]
             Default,
 
-            [Display(Name = "Johesy")]
+            [Display(Name = "Johesy (Black Leotard)")]
             Johesy,
         }        
 
         [Category("Bustups")]
         [DisplayName("Dialogue Portrait")]
-        [Description("Select your preferred dialogue bustups.")]
+        [Description("Select your preferred overworld and PT dialogue bustups.")]
         [DefaultValue(BustupRV.Default)]
         [Display(Order = 0)]
         public BustupRV BustupValue { get; set; }
 
         [Category("Bustups")]
+        [DisplayName("Student ID")]
+        [Description("Choose the photo displayed on the student ID. By shadows0.")]
+        [DefaultValue(StudentIDRV.Default)]
+        [Display(Order = 1)]
+        public StudentIDRV StudentIDValue { get; set; }
+
+        [Category("Bustups")]
         [DisplayName("Epic Partypanel In Color")]
         [Description("Colorful bustup in battle. By Zrego and Wisteria.")]
         [DefaultValue(false)]
-        [Display(Order = 1)]
+        [Display(Order = 2)]
         public bool ColorPartyPanelRV { get; set; } = false;
 
         [Category("Bustups")]
         [DisplayName("AOA Cutin")]
         [Description("Choose your prefered AOA. Default by MyTamagos.")]
         [DefaultValue(AOACutinRV.Default)]
-        [Display(Order = 2)]
+        [Display(Order = 3)]
         public AOACutinRV AOACutinValue { get; set; }
 
         [Category("Metaverse models")]
         [DisplayName("Phantom Thief outfit")]
         [Description("Select your preferred color for the Phantom Thief outfit. Bustups and AOA finisher will be changed accordingly.")]
         [DefaultValue(PhantomSuit.Default)]
-        [Display(Order = 3)]
+        [Display(Order = 4)]
         public PhantomSuit PhantomSuitValue { get; set; }
 
         [Category("Metaverse models")]
         [DisplayName("No All-Out-Attack Portrait")]
         [Description("Removes the All-Out-Attack finisher art. By lyncpk.")]
         [DefaultValue(NoAOAportrait.Default)]
-        [Display(Order = 4)]
+        [Display(Order = 5)]
         public NoAOAportrait AOAValue { get; set; }
 
         [Category("Metaverse models")]
         [DisplayName("Golden Rapiers")]
         [Description("For usage with the Phantom Suit Overhaul, disable if you want regular Rapiers or other weapon model mods to work.")]
         [DefaultValue(false)]
-        [Display(Order = 5)]
+        [Display(Order = 6)]
         public bool GoldRapiers { get; set; } = false;
 
         [Category("Overworld outfits")]
         [DisplayName("Winter Casual outfit")]
         [Description("Select your preferred Winter Casual outfit.")]
         [DefaultValue(WinterCasualRV.Default)]
-        [Display(Order = 6)]
+        [Display(Order = 7)]
         public WinterCasualRV WinterCasualValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Summer Casual outfit")]
         [Description("Select your preferred Summer casual outfit.")]
         [DefaultValue(SummerDressRV.Default)]
-        [Display(Order = 7)]
+        [Display(Order = 8)]
         public SummerDressRV SummerDressValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Midwinter Casual outfit")]
         [Description("Select your preferred Midwinter Casual outfit.")]
         [DefaultValue(MidWinterCasualRV.Default)]
-        [Display(Order = 8)]
+        [Display(Order = 9)]
         public MidWinterCasualRV MidWinterCasualValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Winter Uniform")]
         [Description("Select your preferred Winter uniform.")]
         [DefaultValue(WinterUniformRV.Default)]
-        [Display(Order = 9)]
+        [Display(Order = 10)]
         public WinterUniformRV WinterUniformValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Summer Uniform")]
         [Description("Select your preferred Summer uniform.")]
         [DefaultValue(SummerUniformRV.Default)]
-        [Display(Order = 10)]
+        [Display(Order = 11)]
         public SummerUniformRV SummerUniformValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Midwinter Uniform")]
         [Description("Select your preferred Midwinter uniform.")]
         [DefaultValue(MidWinterUniformRV.Default)]
-        [Display(Order = 11)]
+        [Display(Order = 12)]
         public MidWinterUniformRV MidWinterUniformValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Incognito outfit")]
         [Description("Select your preferred incognito outfit.")]
         [DefaultValue(IncognitoRV.Default)]
-        [Display(Order = 12)]
+        [Display(Order = 13)]
         public IncognitoRV IncognitoValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Workout outfit")]
         [Description("Choose your preferred workout outfit.")]
         [DefaultValue(TracksuitRV.Default)]
-        [Display(Order = 13)]
+        [Display(Order = 14)]
         public TracksuitRV TracksuitValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Loungewear")]
         [Description("Choose your preferred night time outfit.")]
         [DefaultValue(PajamasRV.Default)]
-        [Display(Order = 14)]
+        [Display(Order = 15)]
         public PajamasRV PajamasValue { get; set; }
 
         [Category("Overworld outfits")]
         [DisplayName("Lawson Outfit over 777 Outfit")]
         [Description("Replaces the 777 work outfit with the Lawson outfit from the December P5 Beta.")]
         [DefaultValue(false)]
-        [Display(Order = 15)]
+        [Display(Order = 16)]
         public bool LawsonRV { get; set; } = false;
 
     }

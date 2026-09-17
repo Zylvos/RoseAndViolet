@@ -116,6 +116,10 @@ namespace RVAltModelsLongHair
                         {
                             WinterUniformFolder = "TurtleneckSuspenders";
                         }
+                    else if (_configuration.WinterUniformValue == Config.WinterUniformRV.WinterUnifKotomoBeigeRV)
+                        {
+                            WinterUniformFolder = "BeigeKotomo";
+                        }           
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterUniform", WinterUniformFolder), modDir, criFsApi, modId);
                 }
 
@@ -130,6 +134,10 @@ namespace RVAltModelsLongHair
                     else if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.FurCoatCasualRV)
                         {
                             MidWinterCasualFolder = "FurCoatCasual";
+                        }
+                    else if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.MicaiahMWCasualRV)
+                        {
+                            MidWinterCasualFolder = "MicaiahMidwinterCasual";
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterCasualOutfit", MidWinterCasualFolder), modDir, criFsApi, modId);
                 }
@@ -267,6 +275,17 @@ namespace RVAltModelsLongHair
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WorkoutOutfit", TracksuitFolder), modDir, criFsApi, modId);
                 } 
+
+            // Student ID
+            if (_configuration.StudentIDValue != Config.StudentIDRV.Default)
+                {
+                    string StudentIDFolder = "";
+                    if (_configuration.StudentIDValue == Config.StudentIDRV.LongHairAlt)
+                        {
+                            StudentIDFolder = "LongHairAlt";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "StudentID", StudentIDFolder), modDir, criFsApi, modId);
+                }
 
         }
 

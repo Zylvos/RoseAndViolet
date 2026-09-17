@@ -116,6 +116,10 @@ namespace RVAltModels
                         {
                             WinterUniformFolder = "TurtleneckSuspenders";
                         }
+                    else if (_configuration.WinterUniformValue == Config.WinterUniformRV.WinterUnifKotomoBeigeRV)
+                        {
+                            WinterUniformFolder = "BeigeKotomo";
+                        }                        
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WinterUniform", WinterUniformFolder), modDir, criFsApi, modId);
                 }
 
@@ -130,6 +134,10 @@ namespace RVAltModels
                     else if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.FurCoatCasualRV)
                         {
                             MidWinterCasualFolder = "FurCoatCasual";
+                        }
+                    else if (_configuration.MidWinterCasualValue == Config.MidWinterCasualRV.MicaiahMWCasualRV)
+                        {
+                            MidWinterCasualFolder = "MicaiahMidwinterCasual";
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "MidwinterCasualOutfit", MidWinterCasualFolder), modDir, criFsApi, modId);
                 }
@@ -198,45 +206,88 @@ namespace RVAltModels
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "Loungewear", PajamasFolder), modDir, criFsApi, modId);
                 }
 
-            // Bustup
+            // Overworld Bustup
             if (_configuration.BustupValue != Config.BustupRV.Default)
                 {
                     string BustupFolder = "";
-                    string BustupSubFolder = "";
-                    if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
-                        {
-                            BustupSubFolder = "PureWhite";
-                        }
-                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
-                        {
-                            BustupSubFolder = "RedWhite";
-                        }
-                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
-                        {
-                            BustupSubFolder = "BlackLeotard";
-                        }
+                    //string BustupSubFolder = "";
                     if (_configuration.BustupValue == Config.BustupRV.L7M3RV)
                         {
-                        BustupFolder = "L7M3";
+                            BustupFolder = "L7M3";
                         }
                     else if (_configuration.BustupValue == Config.BustupRV.L7M3V2RV)
                         {
-                        BustupFolder = "L7M3V2";    
+                            BustupFolder = "L7M3V2";    
                         }
                     else if (_configuration.BustupValue == Config.BustupRV.LegacyV1)
                         {
-                        BustupFolder = "LegacyV1";    
+                            BustupFolder = "LegacyV1";    
                         }
                     else if (_configuration.BustupValue == Config.BustupRV.LegacyV2)
                         {
-                        BustupFolder = "LegacyV2";    
+                            BustupFolder = "LegacyV2";    
                         }
-                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder, BustupSubFolder), modDir, criFsApi, modId);
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Bustup", BustupFolder), modDir, criFsApi, modId);
+                }
+
+            // PT Bustup
+            // Determine which PT variant is in use
+            string PTBustupSubFolder = "";
+            if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
+                {
+                    PTBustupSubFolder = "PureWhite";
+                }
+            else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
+                {
+                    PTBustupSubFolder = "RedWhite";
+                }
+            else if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
+                {
+                    PTBustupSubFolder = "BlackLeotard";
+                }
+
+            // If the Legacy portraits are picked and default PT = default legacy
+            if (_configuration.BustupValue == Config.BustupRV.LegacyV1 || _configuration.BustupValue == Config.BustupRV.LegacyV2)            
+                {
+                    if (_configuration.PTBustupValue == Config.PTBustupRV.Default)
+                    {
+                        BindAllFilesIn(Path.Combine("OptionalModFiles", "BustupPT", "LegacyDefault", PTBustupSubFolder), modDir, criFsApi, modId);
+                    }
+                }                              
+
+            // If other portraits are picked
+            if (_configuration.PTBustupValue != Config.PTBustupRV.Default)
+                {
+                    string PTBustupFolder = "";
+                    if (_configuration.PTBustupValue == Config.PTBustupRV.PTL7M3RV)
+                        {
+                            PTBustupFolder = "L7M3";
+                        }
+                    else if (_configuration.PTBustupValue == Config.PTBustupRV.PTL7M3V2RV)
+                        {
+                            PTBustupFolder = "L7M3V2";    
+                        }           
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "BustupPT", PTBustupFolder, PTBustupSubFolder), modDir, criFsApi, modId);
                 }
 
             // EPIC colorful party panel
             if (_configuration.ColorPartyPanelRV)
-                spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", "SPD"));
+            {
+                    string PTPartyPanelFolder = "";
+                    if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
+                        {
+                            PTPartyPanelFolder = "BlackLeotard";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
+                        {
+                            PTPartyPanelFolder = "PureWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
+                        {
+                            PTPartyPanelFolder = "RedWhite";
+                        }                    
+                spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", PTPartyPanelFolder, "SPD"));
+            }
 
             // Menu artworks
             if (_configuration.HeroTexValue == Config.HeroTexRV.NeptuneRV)
@@ -270,7 +321,63 @@ namespace RVAltModels
                             TracksuitFolder = "TamayoOutfit";
                         }
                     BindAllFilesIn(Path.Combine("OptionalModFiles", "WorkoutOutfit", TracksuitFolder), modDir, criFsApi, modId);
-                }            
+                }
+
+            // Student ID
+            if (_configuration.StudentIDValue != Config.StudentIDRV.Default)
+                {
+                    string StudentIDFolder = "";
+                    if (_configuration.StudentIDValue == Config.StudentIDRV.PonytailRibbon)
+                        {
+                            StudentIDFolder = "PonytailRibbon";
+                        }
+                    else if (_configuration.StudentIDValue == Config.StudentIDRV.PonytailHairTie)
+                        {
+                            StudentIDFolder = "PonytailHairTie";
+                        }
+                    else if (_configuration.StudentIDValue == Config.StudentIDRV.PonytailHairDown)
+                        {
+                            StudentIDFolder = "PonytailHairDown";
+                        }
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "StudentID", StudentIDFolder), modDir, criFsApi, modId);
+                }
+
+            // AOA Shard
+            // This is a placeholder for future recolors
+            // Also replaces the wanted artwork
+            if (_configuration.AOAShardRVValue != Config.AOAShardRV.Default)
+                {
+                    string AOAShardFolder = "";
+                    //string AOAShardSubFolder = "";
+                    if (_configuration.AOAShardRVValue == Config.AOAShardRV.AOAShardL7M3)
+                        {
+                        AOAShardFolder = "L7M3";
+                        }        
+                    /*if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
+                        {
+                            AOAShardSubFolder = "PureWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
+                        {
+                            AOAShardSubFolder = "RedWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
+                        {
+                            AOAShardSubFolder = "BlackLeotard";
+                        }*/
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "AOAShard", AOAShardFolder), modDir, criFsApi, modId);
+                }
+
+            // Cutin
+            if (_configuration.CutinRVValue != Config.CutinRV.Default)
+                {
+                    string CutinFolder = "";
+                    if (_configuration.CutinRVValue == Config.CutinRV.CutinL7M3)
+                        {
+                        CutinFolder = "L7M3";
+                        }        
+                    BindAllFilesIn(Path.Combine("OptionalModFiles", "Cutin", CutinFolder), modDir, criFsApi, modId);
+                }
 
         }
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RVAltModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7e3a4ccf773db27f2206b2e3ce00b61ed9f9958")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b78adc1eb88e21ed68a5b9ad51fc3c3f6279287")]
 [assembly: System.Reflection.AssemblyProductAttribute("RVAltModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RVAltModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
