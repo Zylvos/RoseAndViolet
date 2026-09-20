@@ -244,8 +244,23 @@ namespace RVAltModelsLongHair
 
             // EPIC colorful party panel
             if (_configuration.ColorPartyPanelRV)
-                spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", "SPD"));
-
+            {
+                    string PTPartyPanelFolder = "";
+                    if (_configuration.PhantomSuitValue == Config.PhantomSuit.Default)
+                        {
+                            PTPartyPanelFolder = "BlackLeotard";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.PureWhite)
+                        {
+                            PTPartyPanelFolder = "PureWhite";
+                        }
+                    else if (_configuration.PhantomSuitValue == Config.PhantomSuit.RedGold)
+                        {
+                            PTPartyPanelFolder = "RedWhite";
+                        }                    
+                spdEmu.AddDirectory(Path.Combine(modDir, "OptionalModFiles", "EPICPartyPanel", PTPartyPanelFolder, "SPD"));
+            }
+            
             // No AOA portrait
             if (_configuration.AOAValue == Config.NoAOAportrait.NoAOA || _configuration.AOAValue == Config.NoAOAportrait.NoAOASmug)
             {
